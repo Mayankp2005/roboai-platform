@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboAI 10-Project Kit: Hardware Components</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        h1 {
+            color: #2563eb;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+        }
+        h2 {
+            color: #1e40af;
+            margin-top: 32px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 8px;
+        }
+        h3 {
+            color: #4b5563;
+            margin-top: 24px;
+        }
+        ul, ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #111;
+        }
+        .header-icon {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+
+        /* Print-specific styling for the PDF */
+        @media print {
+            @page {
+                size: auto;
+                margin: 0mm; /* This removes the browser's default header (date/time) and footer (URL) */
+            }
+            body {
+                padding: 2cm; /* Re-add margin inside the document so text isn't stuck to the edge */
+                color: #000;
+            }
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            ul, ol, li {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>RoboAI 10-Project Kit: Hardware Components</h1>
+    <p>Based on the official projects outlined in the RoboAI Student Manual, here is the complete list of hardware components required to build all 10 edge AI and robotics projects.</p>
+
+    <h2><span class="header-icon">🧠</span> Brain & Vision</h2>
+    <p>These components are the core of the AI processing and vision capabilities:</p>
+    <ul>
+        <li><strong>ESP32-CAM Module:</strong> The main microcontroller, handling logic, Wi-Fi/Bluetooth, and camera input for Vision Classification (Project 02, 05, 08).</li>
+        <li><strong>USB to Serial Converter (FTDI) & Cable:</strong> Required for programming the ESP32-CAM from your computer.</li>
+    </ul>
+
+    <h2><span class="header-icon">🏃‍♂️</span> Movement & Robot Chassis</h2>
+    <p>These parts allow your AI to interact with the physical world and move:</p>
+    <ul>
+        <li><strong>1x 2-Wheel Drive (2WD) Robot Chassis Kit</strong> (includes acrylic base, caster wheel, and hardware)</li>
+        <li><strong>2x DC Gear Motors</strong> (for driving the robot in Projects 02, 03, 05, 07, 08, 10)</li>
+        <li><strong>2x Rubber Wheels</strong></li>
+        <li><strong>1x Motor Driver Board (L298N or MX1508):</strong> To control the speed and direction of the DC motors based on the ESP32 logic.</li>
+    </ul>
+
+    <h2><span class="header-icon">👁️</span> Sensors & Edge Intelligence</h2>
+    <p>These sensors gather data for the AI models and standard logic:</p>
+    <ul>
+        <li><strong>1x IMU Sensor (MPU6050):</strong> A 6-axis accelerometer and gyroscope for gesture recognition and vibration/terrain mapping (Projects 01, 06).</li>
+        <li><strong>2x IR Line Tracking Sensors:</strong> For detecting light/dark surfaces in the Neural Line Follower (Project 03).</li>
+        <li><strong>1x Microphone Module (INMP441 or MAX9814):</strong> For capturing audio to trigger local Wake-Word detection (Project 04).</li>
+        <li><strong>1x Ultrasonic Distance Sensor (HC-SR04):</strong> For obstacle avoidance and drop-off/edge detection (Projects 08, 10).</li>
+        <li><strong>1x Environmental Sensor Bundle (DHT11/BME280 & Soil Moisture/Rain Sensor):</strong> To collect temperature, humidity, and weather data for the IoT Weather Scout (Project 09).</li>
+    </ul>
+
+    <h2><span class="header-icon">🔋</span> Power & Wiring</h2>
+    <ul>
+        <li><strong>1x Battery Pack (2x 18650 Battery Holder or 4x AA):</strong> To provide sufficient power to the ESP32 and Motors.</li>
+        <li><strong>1x Mini Breadboard:</strong> For prototyping circuits without soldering.</li>
+        <li><strong>Assorted Jumper Wires (M-M, M-F, F-F):</strong> To connect all the sensors to the ESP32-CAM and Motor Driver.</li>
+    </ul>
+
+    <hr style="margin: 40px 0; border: 0; border-top: 1px solid #e5e7eb;">
+
+    <h3><span class="header-icon">🗺️</span> Component-to-Project Mapping</h3>
+    <p>Here is how these components are used across your 10 Platform Projects:</p>
+    <ol>
+        <li><strong>01 Gesture Pilot:</strong> MPU6050 (IMU)</li>
+        <li><strong>02 Vision-Based Follower:</strong> ESP32-CAM, Motors</li>
+        <li><strong>03 Neural Line Follower:</strong> IR Sensors, Motors</li>
+        <li><strong>04 Voice Command Bot:</strong> Microphone Module</li>
+        <li><strong>05 Smart Traffic Car:</strong> ESP32-CAM, Motors</li>
+        <li><strong>06 Pothole/Terrain Mapper:</strong> MPU6050 (IMU)</li>
+        <li><strong>07 Autonomous Maze Solver:</strong> Motors (and optional Ultrasonic)</li>
+        <li><strong>08 Obstacle Intelligence:</strong> ESP32-CAM, Ultrasonic Sensor, Motors</li>
+        <li><strong>09 IoT Weather Scout:</strong> Environmental Sensors</li>
+        <li><strong>10 Safety/Edge Guard:</strong> Ultrasonic Sensor, Motors</li>
+    </ol>
+
+    <script>
+        // Start printing window automatically when page loads
+        window.onload = function() {
+            setTimeout(function() {
+                window.print();
+            }, 500);
+        }
+    </script>
+</body>
+</html>

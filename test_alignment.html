@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script type="module" src="https://unpkg.com/@wokwi/elements@1.0.1/dist/wokwi-elements/wokwi-elements.esm.js"></script>
+<style>
+  body { background: #333; }
+  .container { position: relative; width: 100px; height: 100px; margin: 100px; }
+  .dot { position: absolute; width: 2px; height: 2px; background: red; border-radius: 50%; z-index: 10; transform: translate(-50%, -50%); }
+</style>
+</head>
+<body>
+  <div class="container">
+    <wokwi-led color="red" style="position: absolute; top: 0; left: 0; transform-origin: top left; transform: scale(1);"></wokwi-led>
+    <div class="dot" style="left: 15px; top: 42px;"></div>
+    <div class="dot" style="left: 25px; top: 42px;"></div>
+    <div class="dot" style="left: 15px; top: 44px; background: lime;"></div>
+    <div class="dot" style="left: 25px; top: 44px; background: lime;"></div>
+    <div class="dot" style="left: 14.3px; top: 42px; background: blue;"></div>
+    <div class="dot" style="left: 25.7px; top: 42px; background: blue;"></div>
+  </div>
+</body>
+</html>

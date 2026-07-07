@@ -1,0 +1,24 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "text_print",
+        "id": "project1_print",
+        "x": 100,
+        "y": 100,
+        "inputs": {
+          "TEXT": {
+            "block": {
+              "type": "roboai_sensor_imu",
+              "id": "project1_imu",
+              "fields": {
+                "AXIS": "AX"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}
